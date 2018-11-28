@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="online.jsdev.socialtown" version="0.6.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Closer</name>
+    <description>
+        Make social great again!
+    </description>
+    <author email="jill.guy.staudt@gmail.com" href="http://www.jsdev.online">
+        Jill Staudt
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <gap:config-file overwrite="false" parent="NSLocationAlwaysUsageDescription" platform="ios">
+        <array>
+            <string>NSLocationAlwaysUsageDescription</string>
+        </array>
+    </gap:config-file>
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="icon.png" />
+    <gap:plugin name="cordova-plugin-geolocation" source="npm">
+    </gap:plugin>
+    <preference name="DisallowOverscroll" value="true" />
+</widget>

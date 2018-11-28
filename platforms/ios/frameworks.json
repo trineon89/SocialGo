@@ -1,0 +1,11 @@
+{
+    "CoreLocation.framework": 4,
+    "CoreBluetooth.framework": 1,
+    "Photos.framework": 1,
+    "AVFoundation.framework": 2,
+    "UserNotifications.framework": 2,
+    "Contacts.framework": 1,
+    "AddressBook.framework": 1,
+    "EventKit.framework": 2,
+    "CoreMotion.framework": 1
+}
