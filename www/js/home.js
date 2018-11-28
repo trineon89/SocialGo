@@ -180,6 +180,24 @@ function flipClockChanged(e) {
             value = this.value;
 			console.log(this);
         console.log(id + " has been changed! " + value);
+		storage.setItem('clock',value);
+		if (value==1)
+		{
+			cordova.plugins.notification.local.schedule({
+			        id: 1,
+			        title: "Wecker",
+			        text: "kill the batman ",
+			        at: new Date(storage.getItem('clock-time')),
+			        //icon: 'res://icon',
+			        //smallIcon: 'res://icon',
+			        every: 'day'
+			    });
+		} else {
+			let scope;
+			cordova.plugins.notification.local.cancel(1, function () {
+			    // Notification was cancelled
+			}, scope);
+		}
     }
 
 function initAppHandlers() {

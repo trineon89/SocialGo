@@ -128,12 +128,14 @@ function pageLoader(page)
 
 function setNotifEvents()
 {
-	cordova.plugins.notification.local.requestPermission(function (granted) { 
-		console.log("grantig local notif: "+granted);
-	 });
+	
 	 
 	if (cordova.platformId!="browser")
 	{
+		cordova.plugins.notification.local.requestPermission(function (granted) { 
+			console.log("grantig local notif: "+granted);
+		 });
+		
 		cordova.plugins.firebase.messaging.requestPermission().then(function(token) {
 			console.log("APNS device token: "+ token);
 			apstoken = token;
