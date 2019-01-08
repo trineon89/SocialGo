@@ -22,12 +22,15 @@ fArSRX0bi10:APA91bE1EmQ60_fWVpaQAqUdLt3zODvAQ0eTZpNj_jtjBSpxyh-q8BSFbA3Iqtzrd-D0
 var storage;
 var ttoken = null;
 var apstoken =null;
+var home;
 
-var app = {
+var closer = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
 		userid=1;
+		includeScript('./js/classes/apps.js', function(){ console.log('AppHandler loaded'); });
+		includeScript('./js/classes/home.js', function(){ console.log('HomeHandler loaded'); });
     },
 
     // deviceready Event Handler
@@ -50,7 +53,7 @@ var app = {
     }
 };
 
-app.initialize();
+closer.initialize();
 var pagecontent, userid;
 var uemail, uname, usurname;
 var weather;
@@ -102,11 +105,13 @@ function pageLoader(page)
 				});
 				break;
 			case 'home':
-				includeScript('./js/home.js', function() {
+				/*includeScript('./js/home.js', function() {
 					pagecontent=getHome();
 					document.getElementById('appcontent').innerHTML=pagecontent;
 					initHome();
-				});
+				});*/
+					home=new Home();
+					home.show();
 				break;
 			case 'jugendhaus':
 				setLocation('juki');
