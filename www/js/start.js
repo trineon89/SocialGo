@@ -43,7 +43,7 @@ function getRegisterWindow() {
 
 function start_appendEventHandlers() {
 	$('#start_login').bind("click", function() { 
-		if ((storage.getItem('mail')!=null) && (storage.getItem('id')!=null))
+		if ((config.getEmail()!=null) && (config.getId()!=null))
 		{
 			console.log("quicklogin launch");
 			quicklogin();
@@ -61,8 +61,8 @@ function start_appendEventHandlers() {
 
 function quicklogin()
 {
-	let mail=storage.getItem('mail');
-	let id=storage.getItem('id');
+	let mail=config.getEmail();
+	let id=config.getId();
 	$.ajax({
 		type: "POST",
 		url: "https://gamerest.jsdev.online/web/ajax/ajaxhandler.ajax.php",
@@ -70,10 +70,10 @@ function quicklogin()
 		success: function (result) {
 			if(result.success==true)
 			{
-				uemail=result.email;
-				uname=result.name;
-				usurname=result.surname;
-				userid=result.id;
+				config.setEmail(result.email);
+				config.setName(result.name);
+				config.setSurname(result.surname);
+				config.setId(result.id);
 				console.log(result);
 				pageLoader('map');
 			} else {
@@ -92,10 +92,10 @@ function start_login(mail,pw)
 		success: function (result) {
 			if(result.success==true)
 			{
-				uemail=result.email;
-				uname=result.name;
-				usurname=result.surname;
-				userid=result.id;
+				config.setEmail(result.email);
+				config.setName(result.name);
+				config.setSurname(result.surname);
+				config.setId(result.id);
 				storage.setItem('mail', uemail);
 				storage.setItem('id', userid);
 				console.log(result);
@@ -109,7 +109,7 @@ function start_login(mail,pw)
 
 function start_register()
 {
-	uname=$('#rusername').val();
+	let uname=$('#rusername').val();
 	pw=$('#rpassword').val();
 	nme=$('#name').val();
 	surnme=$('#surname').val();
@@ -120,7 +120,8 @@ function start_register()
 		success: function (result) {
 			if(result.success==true)
 			{
-				start_login(uname=$('#rusername').val(), $('#rpassword').val());
+				config.setName(uname);
+				start_login(config.getName(), $('#rpassword').val());
 			} else {
 				alert('Ups, do ass wuel eppes schief gelaf...');
 			}

@@ -10,6 +10,7 @@ class Home {
 		</div>\
 		<div id="back_handler" class="backicon"></div>';
 		this._apps=new AppHandler();
+		this._wecker=new Wecker();
 	}
 
 	show() {
@@ -29,6 +30,9 @@ class Home {
 			that.onclick(clickeditem);
 		});
 		$('#back_handler').on('click', function() { that._container.style.display="none"; });
+		window.onclick = function(event) {
+			if (event.target == document.getElementById('home_image')) { document.getElementById('home_pc').style.display="none"; }
+		}
 	}
 
 	onclick(item=null) {
@@ -37,6 +41,7 @@ class Home {
 		if($("#home_"+item).length<1) $('<div />',{id:'home_'+item}).appendTo(this._parent);
 		parent=document.querySelector('#home_'+item);
 		if(item=='pc') this._apps.show(parent);
+		if(item=='wecker') this._wecker.show(parent);
 	}
 }
 

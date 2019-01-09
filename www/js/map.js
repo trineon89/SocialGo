@@ -11,6 +11,18 @@ function locate() {
 
 function initMap() {
 	map = L.map('mapcontainer').fitWorld();
+
+	L.tileLayer('res/mapdata/{z}/{x}/{y}.png',
+  {    maxZoom: 16  }).addTo(map);
+/*
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(map);
+*/
 	/*
 	L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
 	//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -18,14 +30,14 @@ function initMap() {
 	    maxZoom: 18
 	}).addTo(map);
 	*/
-	
+	/*
 	var gl = L.mapboxGL({
         attribution: '<a href="https://www.maptiler.com/license/maps/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
         accessToken: 'not-needed',
         style: 'https://maps.tilehosting.com/c/5000d791-e0b4-4048-8506-95d2c5d70a20/styles/closer/style.json?key=faSMrAuBms00D6cuc3ZC'
       }).addTo(map);
-	
-	map.locate({setView: true, maxZoom: 18});
+	*/
+	map.locate({setView: true, maxZoom: 16});
 	map.on('locationfound', onLocationFound);
 	map.setView(new L.LatLng(49.6770297, 6.0017405), 13);
 	defineIcons();
@@ -67,7 +79,7 @@ function setDefinedMarkers() {
 		//pageLoader("commune"); 
 		var ref = cordova.InAppBrowser.open('http://www.kehlen.lu', '_system', 'location=yes');
 	});
-	$('img[alt="_playground_"]').on("click", function(e) {alert('Playground is here');});
+	$('img[alt="_playground_"]').on("click", function(e) {pageLoader("playground");});
 	
 	$('img[alt="_home_"]').bind("taphold", tapholdHandler);
 	
@@ -154,11 +166,12 @@ function getPlayersOnMap()
 	});
 }
 
-function clearOld() {
+function clearOld(home=false) {
 	$.each(map._layers, function (ev) {
 		switch (map._layers[ev].options.alt)
 		{
 			case '_home_': 
+				if (home) map._layers[ev].remove();
 				break;
 			case '_school_': 
 				break;
@@ -189,11 +202,10 @@ function togglePopup(f, e) {
 	console.log(f);
 	console.log(e);
 }
-
+/*
 function MenuPopup() {
 	$('#homesettings').css("display", "block");
 }
-
 function getSettingsMenu() {
 	shtml='<div id="settings_close">X</div>';
 	shtml+='<div id="settings_trash" class="settings_icon">Trash</div>';
@@ -202,7 +214,7 @@ function getSettingsMenu() {
 	shtml+='<div id="settings_points" class="settings_text">My Points</div>';
 	return shtml;
 }
-
+*/
 function defineIcons() {
 	HomeIcon = L.icon({
 	    iconUrl: 'res/icons/home_house.png',

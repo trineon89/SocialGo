@@ -253,6 +253,27 @@ body {
     left: 0;
 }
 
+.inneroverlay-container {
+    position: absolute;
+    top:0vh;
+    left:0vh;
+    height:100vh;
+    width:100vw;
+    z-index:1500;
+    background-color: rgba(1, 1, 1, 0.43);
+}
+
+.inneroverlay {
+    padding:5%;
+    position: relative;
+    top: 5%;
+    left:5%;
+    height:80%;
+    width:80%;
+    z-index:1500;
+    background-color: rgb(255,255,255);
+}
+
 .innerConfig {
 	background-color: #78902E;
 	height:100%;
@@ -293,6 +314,16 @@ body {
     margin: 10px auto;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.houseselector {
+    width: 20%;
+    height: 20%;
+    float: left;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 
 .house-001 {background-image: url('../res/icons/houses/001.png');}
@@ -621,6 +652,25 @@ img {
     display: inline-block;
 }
 
+/*
+*   Playground
+*/
+#playground_container {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+}
+
+.playground_image_container {
+	display: inline-block;
+}
+
+#playground_image {
+    height: 100vh;
+    overflow-y: hidden;
+}
 /*
 *
 *	HOME SCREEN

@@ -13,7 +13,7 @@ class AppHandler {
 
     show(parent)
     {
-        $(parent).innerHTML='<div class="title">Meng Apps</div>';
+        $(parent).html('<div class="title">Meng Apps</div>');
         this._Apps.forEach(function(anApp) {
             $('<span />',{class:'apps '+anApp._Appname}).appendTo(parent);
         });
