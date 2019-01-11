@@ -52,6 +52,12 @@
 		1BFAB0ED7F8C49D8B2F966CF /* APPNotificationOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D5400290B54170A50E4E01 /* APPNotificationOptions.m */; };
 		2194D95E50AB4C33B6F4A93E /* UNUserNotificationCenter+APPLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EF941E1C0425DB8B3E67A /* UNUserNotificationCenter+APPLocalNotification.m */; };
 		DC605CE9E83648DAA384E68F /* UNNotificationRequest+APPLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 675BD58C60C6438F92D63584 /* UNNotificationRequest+APPLocalNotification.m */; };
+		89A7A713B9554E3696F00E23 /* AppCenterShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F559205A5E44A6F97E454BA /* AppCenterShared.m */; };
+		7243052FCC1C4CE2963322A6 /* AppCenterSharedPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AC651D1044F1686C8D72B /* AppCenterSharedPlugin.m */; };
+		3F302B88481543B498F62DC5 /* AppCenterAnalyticsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B39F0703A6BB4CF6B8BB06F5 /* AppCenterAnalyticsPlugin.m */; };
+		348D3D3B319340C7992D89E9 /* AppCenterCrashesPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 26481FC9DACB41D6B921CAE5 /* AppCenterCrashesPlugin.m */; };
+		41C73048850D448A8126C74D /* CordovaCrashesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17B98B0B0549F3BDFDB87B /* CordovaCrashesDelegate.m */; };
+		B7DB7E1126A3411D91FA7353 /* CrashesUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D61F4E2FD6A42099A646BFC /* CrashesUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +161,18 @@
 		171D4869E08148D89EADF27C /* APPNotificationOptions.h */ = {isa = PBXFileReference; name = "APPNotificationOptions.h"; path = "cordova-plugin-local-notification/APPNotificationOptions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		7D14265DC47144A5A29FC529 /* UNUserNotificationCenter+APPLocalNotification.h */ = {isa = PBXFileReference; name = "UNUserNotificationCenter+APPLocalNotification.h"; path = "cordova-plugin-local-notification/UNUserNotificationCenter+APPLocalNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		5BF6F33DADD24678AD442BC8 /* UNNotificationRequest+APPLocalNotification.h */ = {isa = PBXFileReference; name = "UNNotificationRequest+APPLocalNotification.h"; path = "cordova-plugin-local-notification/UNNotificationRequest+APPLocalNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3F559205A5E44A6F97E454BA /* AppCenterShared.m */ = {isa = PBXFileReference; name = "AppCenterShared.m"; path = "cordova-plugin-appcenter-shared/AppCenterShared.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D32AC651D1044F1686C8D72B /* AppCenterSharedPlugin.m */ = {isa = PBXFileReference; name = "AppCenterSharedPlugin.m"; path = "cordova-plugin-appcenter-shared/AppCenterSharedPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		00FEC573D6524E468C2760D1 /* AppCenterShared.h */ = {isa = PBXFileReference; name = "AppCenterShared.h"; path = "cordova-plugin-appcenter-shared/AppCenterShared.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C48EA46B5925406EA0BD16A1 /* AppCenterSharedPlugin.h */ = {isa = PBXFileReference; name = "AppCenterSharedPlugin.h"; path = "cordova-plugin-appcenter-shared/AppCenterSharedPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B39F0703A6BB4CF6B8BB06F5 /* AppCenterAnalyticsPlugin.m */ = {isa = PBXFileReference; name = "AppCenterAnalyticsPlugin.m"; path = "cordova-plugin-appcenter-analytics/AppCenterAnalyticsPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		126CAA38FE274A5691EC2DF7 /* AppCenterAnalyticsPlugin.h */ = {isa = PBXFileReference; name = "AppCenterAnalyticsPlugin.h"; path = "cordova-plugin-appcenter-analytics/AppCenterAnalyticsPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		26481FC9DACB41D6B921CAE5 /* AppCenterCrashesPlugin.m */ = {isa = PBXFileReference; name = "AppCenterCrashesPlugin.m"; path = "cordova-plugin-appcenter-crashes/AppCenterCrashesPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		2E17B98B0B0549F3BDFDB87B /* CordovaCrashesDelegate.m */ = {isa = PBXFileReference; name = "CordovaCrashesDelegate.m"; path = "cordova-plugin-appcenter-crashes/CordovaCrashesDelegate.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1D61F4E2FD6A42099A646BFC /* CrashesUtils.m */ = {isa = PBXFileReference; name = "CrashesUtils.m"; path = "cordova-plugin-appcenter-crashes/CrashesUtils.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		378895050B0D42D197021DE4 /* AppCenterCrashesPlugin.h */ = {isa = PBXFileReference; name = "AppCenterCrashesPlugin.h"; path = "cordova-plugin-appcenter-crashes/AppCenterCrashesPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		72C16AE0440743979A801A16 /* CordovaCrashesDelegate.h */ = {isa = PBXFileReference; name = "CordovaCrashesDelegate.h"; path = "cordova-plugin-appcenter-crashes/CordovaCrashesDelegate.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E4EB6BFF2A6D4C6087E46818 /* CrashesUtils.h */ = {isa = PBXFileReference; name = "CrashesUtils.h"; path = "cordova-plugin-appcenter-crashes/CrashesUtils.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +348,18 @@
 				171D4869E08148D89EADF27C /* APPNotificationOptions.h */,
 				7D14265DC47144A5A29FC529 /* UNUserNotificationCenter+APPLocalNotification.h */,
 				5BF6F33DADD24678AD442BC8 /* UNNotificationRequest+APPLocalNotification.h */,
+				3F559205A5E44A6F97E454BA /* AppCenterShared.m */,
+				D32AC651D1044F1686C8D72B /* AppCenterSharedPlugin.m */,
+				00FEC573D6524E468C2760D1 /* AppCenterShared.h */,
+				C48EA46B5925406EA0BD16A1 /* AppCenterSharedPlugin.h */,
+				B39F0703A6BB4CF6B8BB06F5 /* AppCenterAnalyticsPlugin.m */,
+				126CAA38FE274A5691EC2DF7 /* AppCenterAnalyticsPlugin.h */,
+				26481FC9DACB41D6B921CAE5 /* AppCenterCrashesPlugin.m */,
+				2E17B98B0B0549F3BDFDB87B /* CordovaCrashesDelegate.m */,
+				1D61F4E2FD6A42099A646BFC /* CrashesUtils.m */,
+				378895050B0D42D197021DE4 /* AppCenterCrashesPlugin.h */,
+				72C16AE0440743979A801A16 /* CordovaCrashesDelegate.h */,
+				E4EB6BFF2A6D4C6087E46818 /* CrashesUtils.h */,
 			);
 			name = Plugins;
 			path = "Closer/Plugins";
@@ -470,6 +500,12 @@
 				1BFAB0ED7F8C49D8B2F966CF /* APPNotificationOptions.m in Sources */,
 				2194D95E50AB4C33B6F4A93E /* UNUserNotificationCenter+APPLocalNotification.m in Sources */,
 				DC605CE9E83648DAA384E68F /* UNNotificationRequest+APPLocalNotification.m in Sources */,
+				89A7A713B9554E3696F00E23 /* AppCenterShared.m in Sources */,
+				7243052FCC1C4CE2963322A6 /* AppCenterSharedPlugin.m in Sources */,
+				3F302B88481543B498F62DC5 /* AppCenterAnalyticsPlugin.m in Sources */,
+				348D3D3B319340C7992D89E9 /* AppCenterCrashesPlugin.m in Sources */,
+				41C73048850D448A8126C74D /* CordovaCrashesDelegate.m in Sources */,
+				B7DB7E1126A3411D91FA7353 /* CrashesUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

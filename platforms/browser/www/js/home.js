@@ -18,17 +18,6 @@ function initHome() {
 	$('map').imageMapResize();
 	$('area').on('click', function() {
 		var clickeditem = $(this).attr('alt');
-		/*
-		if (clickeditem=="wecker")
-		{
-			alert("Hey ass de Wecker");
-		}
-		*/
-		/*
-		$.ajax({
-			
-		});
-		*/
 		$('#home_'+clickeditem).css("display", "block");
 		//pageLoader(clickeditem);
 	})

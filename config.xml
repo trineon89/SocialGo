@@ -43,6 +43,7 @@
         <splash qualifier="port-xxxhdpi" src="res/screens/android/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
+        <preference name="APP_SECRET" value="9e13349f-7a85-4d7d-acc4-63ddaba5e9a4" />
         <resource-file src="GoogleService-Info.plist" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
@@ -92,4 +93,6 @@
     <plugin name="cordova-plugin-local-notification" spec="^0.9.0-beta.2" />
     <engine name="browser" spec="^5.0.4" />
     <engine name="ios" spec="^4.5.5" />
+    <plugin name="cordova-plugin-appcenter-analytics" spec="^0.2.2" />
+    <plugin name="cordova-plugin-appcenter-crashes" spec="^0.2.2" />
 </widget>

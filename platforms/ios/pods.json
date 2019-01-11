@@ -1,1 +1,8 @@
-{}
+{
+    "AppCenter": {
+        "name": "AppCenter",
+        "type": "podspec",
+        "spec": "",
+        "count": 3
+    }
+}

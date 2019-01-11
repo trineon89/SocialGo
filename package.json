@@ -16,13 +16,18 @@
       "cordova-plugin-request-location-accuracy": {},
       "cordova-plugin-geolocation": {},
       "cordova-plugin-datepicker": {},
-      "cordova-plugin-local-notification": {}
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-appcenter-analytics": {},
+      "cordova-plugin-appcenter-crashes": {}
     }
   },
   "dependencies": {
     "cordova-browser": "^5.0.4",
     "cordova-ios": "^4.5.5",
     "cordova-plugin-app-launcher": "^0.4.0",
+    "cordova-plugin-appcenter-analytics": "^0.2.2",
+    "cordova-plugin-appcenter-crashes": "^0.2.2",
+    "cordova-plugin-appcenter-shared": "^0.2.2",
     "cordova-plugin-badge": "^0.8.7",
     "cordova-plugin-datepicker": "^0.9.3",
     "cordova-plugin-device": "^2.0.2",

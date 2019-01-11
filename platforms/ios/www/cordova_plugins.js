@@ -367,6 +367,30 @@ module.exports = [
       "cordova.plugins.notification.local.core",
       "plugin.notification.local.core"
     ]
+  },
+  {
+    "id": "cordova-plugin-appcenter-shared.AppCenter",
+    "file": "plugins/cordova-plugin-appcenter-shared/www/AppCenter.js",
+    "pluginId": "cordova-plugin-appcenter-shared",
+    "clobbers": [
+      "AppCenter"
+    ]
+  },
+  {
+    "id": "cordova-plugin-appcenter-analytics.Analytics",
+    "file": "plugins/cordova-plugin-appcenter-analytics/www/Analytics.js",
+    "pluginId": "cordova-plugin-appcenter-analytics",
+    "clobbers": [
+      "AppCenter.Analytics"
+    ]
+  },
+  {
+    "id": "cordova-plugin-appcenter-crashes.Crashes",
+    "file": "plugins/cordova-plugin-appcenter-crashes/www/Crashes.js",
+    "pluginId": "cordova-plugin-appcenter-crashes",
+    "clobbers": [
+      "AppCenter.Crashes"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -383,7 +407,10 @@ module.exports.metadata =
   "cordova-plugin-datepicker": "0.9.3",
   "cordova-plugin-device": "2.0.2",
   "cordova-plugin-badge": "0.8.7",
-  "cordova-plugin-local-notification": "0.9.0-beta.2"
+  "cordova-plugin-local-notification": "0.9.0-beta.2",
+  "cordova-plugin-appcenter-shared": "0.2.2",
+  "cordova-plugin-appcenter-analytics": "0.2.2",
+  "cordova-plugin-appcenter-crashes": "0.2.2"
 };
 // BOTTOM OF METADATA
 });

@@ -33,6 +33,12 @@
     },
     "cordova-plugin-local-notification": {
       "PACKAGE_NAME": "online.jsdev.socialtown"
+    },
+    "cordova-plugin-appcenter-analytics": {
+      "PACKAGE_NAME": "online.jsdev.socialtown"
+    },
+    "cordova-plugin-appcenter-crashes": {
+      "PACKAGE_NAME": "online.jsdev.socialtown"
     }
   },
   "dependent_plugins": {
@@ -43,6 +49,9 @@
       "PACKAGE_NAME": "online.jsdev.socialtown"
     },
     "cordova-plugin-badge": {
+      "PACKAGE_NAME": "online.jsdev.socialtown"
+    },
+    "cordova-plugin-appcenter-shared": {
       "PACKAGE_NAME": "online.jsdev.socialtown"
     }
   }

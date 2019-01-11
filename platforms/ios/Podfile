@@ -2,5 +2,5 @@
 platform :ios, '8.0'
 target 'Closer' do
 	project 'Closer.xcodeproj'
-
+	pod 'AppCenter'
 end

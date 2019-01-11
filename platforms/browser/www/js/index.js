@@ -22,12 +22,22 @@ fArSRX0bi10:APA91bE1EmQ60_fWVpaQAqUdLt3zODvAQ0eTZpNj_jtjBSpxyh-q8BSFbA3Iqtzrd-D0
 var storage;
 var ttoken = null;
 var apstoken =null;
+var home;
+var profile;
+var config;
+var playground;
 
-var app = {
+var closer = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
 		userid=1;
+		includeScript('./js/classes/config.js', function(){ console.log('ConfigHandler loaded'); });
+		includeScript('./js/classes/apps.js', function(){ console.log('AppHandler loaded'); });
+		includeScript('./js/classes/home.js', function(){ console.log('HomeHandler loaded'); });
+		includeScript('./js/classes/profile.js', function(){ console.log('ProfileHandler loaded'); });
+		includeScript('./js/classes/wecker.js', function(){ console.log('WeckerHandler loaded'); });
+		includeScript('./js/classes/playground.js', function(){ console.log('PlaygroundHandler loaded'); });
     },
 
     // deviceready Event Handler
@@ -39,6 +49,7 @@ var app = {
 		getWeather();
 		console.log("storage init");
 		storage = window.localStorage;
+		config = new Config(storage);
 		console.log("init notif");
 		setNotifEvents();
 		//navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -50,9 +61,9 @@ var app = {
     }
 };
 
-app.initialize();
+closer.initialize();
 var pagecontent, userid;
-var uemail, uname, usurname;
+//var uemail, uname, usurname;
 var weather;
 pageLoader('start');
 
@@ -81,6 +92,7 @@ function pageLoader(page)
 								document.getElementById('appcontent').innerHTML=pagecontent;
 								initMap();
 								appendMapEventHandlers();
+								profile = new Profile(config.getId(), config.getHouse());
 							});
 						});
 						
@@ -101,12 +113,18 @@ function pageLoader(page)
 					initSchool();
 				});
 				break;
+			case 'playground' :
+				playground=new Playground();
+				playground.show();
+			break;
 			case 'home':
-				includeScript('./js/home.js', function() {
+				/*includeScript('./js/home.js', function() {
 					pagecontent=getHome();
 					document.getElementById('appcontent').innerHTML=pagecontent;
 					initHome();
-				});
+				});*/
+					home=new Home();
+					home.show();
 				break;
 			case 'jugendhaus':
 				setLocation('juki');
@@ -269,13 +287,20 @@ function showOverlay(sel="config",selid=0)
 	switch (sel)
 	{
 	case "config" :
+	/*
 		$(".overlay").html(getConfigOverlay());
 		$('#backhandler').bind("click", function() { $(".overlay").css("display","none"); });
 		$('#cfg-show-my-profile').bind("click", function() { showOverlay("profile"); });
+	*/
+		config.show();
+	
 		break;
 	case "profile" :
+		/*
 		$(".overlay").html(getProfileOverlay(selid));
 		$('#backhandler').bind("click", function() { showOverlay("config"); });
+		*/
+		profile.show();
 		break;
 	}
 	
