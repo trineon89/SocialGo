@@ -97,8 +97,8 @@ function start_login(mail,pw)
 				config.setName(result.name);
 				config.setSurname(result.surname);
 				config.setId(result.id);
-				storage.setItem('mail', uemail);
-				storage.setItem('id', userid);
+				//storage.setItem('mail', uemail);
+				//storage.setItem('id', userid);
 				console.log(result);
 				pageLoader('map');
 			} else {
