@@ -77,7 +77,8 @@ function quicklogin()
 				console.log(result);
 				pageLoader('map');
 			} else {
-				alert('Automatësch aloggen huet net geklappt!');
+				//alert('Automatësch aloggen huet net geklappt!');
+				$('#login_window').css("display","block"); 
 			}
 		}
 	});
@@ -96,8 +97,8 @@ function start_login(mail,pw)
 				config.setName(result.name);
 				config.setSurname(result.surname);
 				config.setId(result.id);
-				storage.setItem('mail', uemail);
-				storage.setItem('id', userid);
+				//storage.setItem('mail', uemail);
+				//storage.setItem('id', userid);
 				console.log(result);
 				pageLoader('map');
 			} else {

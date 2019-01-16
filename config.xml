@@ -91,8 +91,8 @@
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
     <plugin name="cordova-plugin-datepicker" spec="^0.9.3" />
     <plugin name="cordova-plugin-local-notification" spec="^0.9.0-beta.2" />
-    <engine name="browser" spec="^5.0.4" />
-    <engine name="ios" spec="^4.5.5" />
     <plugin name="cordova-plugin-appcenter-analytics" spec="^0.2.2" />
     <plugin name="cordova-plugin-appcenter-crashes" spec="^0.2.2" />
+    <engine name="browser" spec="^5.0.4" />
+    <engine name="ios" spec="^4.5.5" />
 </widget>

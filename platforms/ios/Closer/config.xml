@@ -173,4 +173,5 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <preference name="APP_SECRET" value="9e13349f-7a85-4d7d-acc4-63ddaba5e9a4" />
 </widget>

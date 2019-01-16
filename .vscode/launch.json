@@ -83,7 +83,7 @@
             "type": "cordova",
             "request": "attach",
             "platform": "ios",
-            "target": "emulator",
+            "target": "iPhone 8, 12.1",
             "port": 9220,
             "sourceMaps": true,
             "cwd": "${workspaceFolder}"
