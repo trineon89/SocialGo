@@ -77,7 +77,8 @@ function quicklogin()
 				console.log(result);
 				pageLoader('map');
 			} else {
-				alert('Automatësch aloggen huet net geklappt!');
+				//alert('Automatësch aloggen huet net geklappt!');
+				$('#login_window').css("display","block"); 
 			}
 		}
 	});
