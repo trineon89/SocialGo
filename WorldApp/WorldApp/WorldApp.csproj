@@ -12,4 +12,10 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="01-Login.xaml.cs">
+      <DependentUpon>01-Login.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

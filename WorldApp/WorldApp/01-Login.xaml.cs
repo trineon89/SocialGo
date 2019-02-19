@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace WorldApp
 {
-    public partial class MainPage : ContentPage
+    public partial class Login : ContentPage
     {
-        public MainPage()
+        public Login()
         {
             InitializeComponent();
         }
