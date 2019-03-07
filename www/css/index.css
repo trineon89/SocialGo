@@ -148,9 +148,6 @@ body {
 	min-height: 50px;
 	/*text-shadow:0px 1px 0px #2f6627;*/
 }
-.button:hover {
-	/*background-color:#5cbf2a;*/
-}
 .button:active {
 	position:relative;
 	top:1px;
@@ -511,10 +508,6 @@ img {
 	text-shadow: none;
 }
 
-.settings_text {
-	
-}
-
 /*
 *
 *	MAP ICONS
@@ -597,10 +590,6 @@ img {
     font-size: 7pt;
 }
 
-#school_bottom_container {
-	/*position:relative;*/
-}
-
 #school_bottom {
     position: absolute;
     bottom: 0px;
@@ -655,7 +644,7 @@ img {
 /*
 *   Playground
 */
-#playground_container {
+#playground_container, #pharmacie_container {
 	overflow-y: hidden;
 	overflow-x: scroll;
 	scroll-behavior: smooth;
@@ -663,11 +652,11 @@ img {
 	height: 100%;
 }
 
-.playground_image_container {
+.playground_image_container, .pharmacie_image_container {
 	display: inline-block;
 }
 
-#playground_image {
+#playground_image, #pharmacie_image {
     height: 100vh;
     overflow-y: hidden;
 }

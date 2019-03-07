@@ -65,6 +65,7 @@ function setDefinedMarkers() {
 	L.marker([49.667418, 6.034672], {icon: CommuneIcon, alt: "_commune_"}).addTo(map);
 	L.marker([49.665673, 6.030050], {icon: PlaygroundIcon, alt: "_playground_"}).addTo(map);
 	L.marker([49.672954, 6.034673], {icon: JukiIcon, alt: "_juki_"}).addTo(map);
+	L.marker([49.670583, 6.035427], {icon: PharmacieIcon, alt: "_pharmacie_"}).addTo(map);
 	/* MINISTERES */
 	L.marker([49.609550, 6.132113], {icon: MinistIcon, alt: "_minist_etat_"}).addTo(map);
 	L.marker([49.601776, 6.132867], {icon: MinistIcon, alt: "_minist_fonc_pub_"}).addTo(map);
@@ -89,8 +90,9 @@ function setDefinedMarkers() {
 		//pageLoader("commune"); 
 		var ref = cordova.InAppBrowser.open('http://www.kehlen.lu', '_system', 'location=yes');
 	});
-	$('img[alt="_playground_"]').on("click", function(e) {pageLoader("playground");});
-	
+	$('img[alt="_playground_"]').on("click", function() {pageLoader("playground");});
+	$('img[alt="_pharmacie_"]').on("click", function() {pageLoader("pharmacie");});
+
 	$('img[alt="_home_"]').bind("taphold", tapholdHandler);
 	
 	$('#settings_close').bind("click", function() {  $('#homesettings').css("display", "none"); });
@@ -190,12 +192,10 @@ function clearOld(home=false) {
 					if (home) map._layers[ev].remove();
 					break;
 				case '_school_': 
-					break;
 				case '_commune_': 
-					break;
 				case '_playground_': 
-					break;
 				case '_juki_': 
+				case '_pharmacie_':
 					break;
 				default: 
 					if (map._layers[ev].options.alt != undefined)
@@ -275,6 +275,16 @@ function defineIcons() {
 	});
 	JukiIcon = L.icon({
 	    iconUrl: 'res/icons/juki.png',
+	    shadowUrl: 'res/icons/home_house_shadow.png',
+
+	    iconSize:     [75, 75], // size of the icon
+	    shadowSize:   [32, 32], // size of the shadow
+	    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+	    shadowAnchor: [18, 90],  // the same for the shadow
+	    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	});
+	PharmacieIcon = L.icon({
+	    iconUrl: 'res/icons/pharmacie.png',
 	    shadowUrl: 'res/icons/home_house_shadow.png',
 
 	    iconSize:     [75, 75], // size of the icon

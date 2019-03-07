@@ -38,6 +38,7 @@ var closer = {
 		includeScript('./js/classes/profile.js', function(){ console.log('ProfileHandler loaded'); });
 		includeScript('./js/classes/wecker.js', function(){ console.log('WeckerHandler loaded'); });
 		includeScript('./js/classes/playground.js', function(){ console.log('PlaygroundHandler loaded'); });
+		includeScript('./js/classes/pharmacie.js', function(){ console.log('PharmacieHandler loaded'); });
     },
 
     // deviceready Event Handler
@@ -117,6 +118,10 @@ function pageLoader(page)
 				playground=new Playground();
 				playground.show();
 			break;
+			case 'pharmacie' :
+			pharmacie=new Pharmacie();
+			pharmacie.show();
+		break;
 			case 'home':
 				/*includeScript('./js/home.js', function() {
 					pagecontent=getHome();
