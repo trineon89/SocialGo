@@ -11,8 +11,8 @@ function locate() {
 
 function initMap() {
 	map = L.map('mapcontainer').fitWorld();
-
-	L.tileLayer('res/mapdata/{z}/{x}/{y}.png',
+	L.tileLayer('http://gamerest.jsdev.online/mapdata/{z}/{x}/{y}.png',
+	//L.tileLayer('res/mapdata/{z}/{x}/{y}.png',
   {    maxZoom: 16  }).addTo(map);
 /*
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
