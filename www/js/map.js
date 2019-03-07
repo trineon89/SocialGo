@@ -65,6 +65,16 @@ function setDefinedMarkers() {
 	L.marker([49.667418, 6.034672], {icon: CommuneIcon, alt: "_commune_"}).addTo(map);
 	L.marker([49.665673, 6.030050], {icon: PlaygroundIcon, alt: "_playground_"}).addTo(map);
 	L.marker([49.672954, 6.034673], {icon: JukiIcon, alt: "_juki_"}).addTo(map);
+	/* MINISTERES */
+	L.marker([49.609550, 6.132113], {icon: MinistIcon, alt: "_minist_etat_"}).addTo(map);
+	L.marker([49.601776, 6.132867], {icon: MinistIcon, alt: "_minist_fonc_pub_"}).addTo(map);
+	L.marker([49.611840, 6.135106], {icon: MinistIcon, alt: "_minist_aff_etr_"}).addTo(map);
+	L.marker([49.605657, 6.138994], {icon: MinistIcon, alt: "_office_nat_enfance"}).addTo(map);
+	L.marker([49.611186, 6.122878], {icon: MinistIcon, alt: "_minist_sante_"}).addTo(map);
+	L.marker([49.612560, 6.125399], {icon: MinistIcon, alt: "_minist_fam_integ_"}).addTo(map);
+	L.marker([49.608558, 6.131831], {icon: MinistIcon, alt: "_minist_cult_"}).addTo(map);
+	L.marker([49.608384, 6.132055], {icon: MinistIcon, alt: "_minist_egal_"}).addTo(map);
+
 	$('img[alt="_home_"]').on("click", function(e) {
 		console.log(e);
 		pageLoader("home");
@@ -168,25 +178,32 @@ function getPlayersOnMap()
 
 function clearOld(home=false) {
 	$.each(map._layers, function (ev) {
-		switch (map._layers[ev].options.alt)
+		var str = map._layers[ev].options.alt;
+		if (str == undefined) {str="";}
+		if (str.match(/_minist_/) || (str.match(/_office_/)))
 		{
-			case '_home_': 
-				if (home) map._layers[ev].remove();
-				break;
-			case '_school_': 
-				break;
-			case '_commune_': 
-				break;
-			case '_playground_': 
-				break;
-			case '_juki_': 
-				break;
-			default: 
-				if (map._layers[ev].options.alt != undefined)
-				{
-					map._layers[ev].remove();
-				}
-				break;
+			console.log(str);
+		} else {
+			switch (map._layers[ev].options.alt)
+			{
+				case '_home_': 
+					if (home) map._layers[ev].remove();
+					break;
+				case '_school_': 
+					break;
+				case '_commune_': 
+					break;
+				case '_playground_': 
+					break;
+				case '_juki_': 
+					break;
+				default: 
+					if (map._layers[ev].options.alt != undefined)
+					{
+						map._layers[ev].remove();
+					}
+					break;
+			}
 		}
 	});
 }
@@ -261,6 +278,16 @@ function defineIcons() {
 	    shadowUrl: 'res/icons/home_house_shadow.png',
 
 	    iconSize:     [75, 75], // size of the icon
+	    shadowSize:   [32, 32], // size of the shadow
+	    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+	    shadowAnchor: [18, 90],  // the same for the shadow
+	    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	});
+	MinistIcon = L.icon({
+	    iconUrl: 'res/icons/minist.png',
+	    shadowUrl: 'res/icons/home_house_shadow.png',
+
+	    iconSize:     [32, 32], // size of the icon
 	    shadowSize:   [32, 32], // size of the shadow
 	    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
 	    shadowAnchor: [18, 90],  // the same for the shadow
