@@ -723,6 +723,9 @@ img {
     text-align: center;
     margin: 10px 5px;
 }
+
+.addnew { background-image:url('../res/icons/apps/addnew.png'); }
+
 .fbm { background-image:url('../res/icons/apps/fb-messenger.png'); }
 .snch { background-image:url('../res/icons/apps/snapchat.png'); }
 .whtsp { background-image:url('../res/icons/apps/whatsapp.png'); }
